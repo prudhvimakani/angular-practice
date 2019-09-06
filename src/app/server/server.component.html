@@ -1,0 +1,5 @@
+<p>
+    The server component in {{ name }}
+</p>
+<input type="text" #email (keyup.enter) = "onKeyUp(email.value)">
+<input type="text" [(ngModel)] = "email1" (keyup.enter) = "onKeyUpTwoWayBind()">

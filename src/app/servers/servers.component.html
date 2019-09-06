@@ -1,0 +1,24 @@
+<label for="">Server Name:</label>
+<!-- <input type="text" class="form-control" (input) = "onUpdateServerName($event)"> -->
+<input type="text" class="form-control" [(ngModel)]="serverName">
+<p>{{ serverName }}</p>
+<button class="btn btn-primary" [disabled]="!allowNewServer" (click)="onCreateServer()">
+    Add Server
+</button>
+<p>{{ serverCreateStatus }}</p>
+
+
+<h1>Course Details::</h1>
+
+<div> {{ course.title | uppercase }} </div>
+<div> {{ course.rating | number: '1.1-2' }} </div>
+<div> {{ course.students | number }} </div>
+<div> {{ course.price | currency:'AUD': true: '5.2-2' }} </div>
+<div> {{ course.releaseDate | date: 'shortDate' }} </div>
+
+
+<h1>Custome Pipe</h1>
+{{ desc | summary:10 }} <!-- summary is a custom pipe-->
+
+<app-server></app-server>
+<!-- <app-server></app-server> -->

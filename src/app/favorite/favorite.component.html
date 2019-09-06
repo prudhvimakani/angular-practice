@@ -1,0 +1,18 @@
+<!-- <p>
+  favorite works!
+</p>
+<input type="button" value="trigger" (click)="onClick()">
+<button class="btn btn-primary" [disabled]="isSelected"> Sample button</button> -->
+<h1>In favorite component</h1><br>
+<b>Helloooooooooooo</b><br>
+<span
+class="glyphicon"
+[class.glyphicon-log-in] = "isFavorite"
+[class.glyphicon-log-out] = "!isFavorite" >
+</span>
+
+<button [disabled] = "isFavorite"> Enable</button><br>
+<button [disabled] = "!isFavorite"> Disable</button>
+
+
+{{ isFavorite }}  
